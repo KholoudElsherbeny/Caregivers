@@ -1,0 +1,361 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body class="light-mode">
+    <!-- Start Background  -->
+    <div class="video-bg">
+        <video width="320" height="240" autoplay loop muted>
+            <source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+        </video>
+    </div><!-- End Background -->
+    <!-- Start Dark - light  -->
+    <div class="dark-light">
+    <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" /></svg>
+    </div><!-- End Dark - light -->
+    <!-- Start Content App  -->
+    <div class="app">
+        <!-- Start Header -->
+        <div class="header">
+            <!-- Start logo -->
+            <div class="logo">
+                <img src="{% static 'images/logo3.png' %}" alt="">
+            </div><!-- End logo -->
+            <!-- Start Header links -->
+            <div class="header-menu">
+                <a class="menu-link is-active" href="#">Home</a>
+                <a class="menu-link" href="{% url 'advicePatient' %}">Advice</a>
+                <a class="menu-link" href="{% url 'bookPatient' %}">Booking</a>
+                <a class="menu-link " href="{% url 'caregiversPatient' %}">Caregivers</a>
+            </div><!-- End header links -->
+            <!-- Start Search -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+            </div><!-- End Search -->
+            <!-- Header icon , Profile -->
+            <div class="header-profile">
+                <!-- Start profile doctor -->
+                <img class="profile-img" src="{% static 'images/chi1.png' %}" alt="">
+            </div><!--  End Header icon , Profile -->
+        </div> <!-- End Header -->
+        <!-- Start Content -->
+        <div class="wrapper">
+            <!-- Start Left Side -->
+            <div class="left-side">
+                <!-- Start Side - wrapper 1  -->
+                <div class="side-wrapper">
+                    <!-- Start Doctor -->
+                    <div class="side-title">Doctor</div>
+                    <!-- Start Side- menu -->
+                    <div class="side-menu">
+                        <a href="{% url 'profilePatient' %}">
+                            <i class="fas fa-user" id="icon"></i>profile
+                        </a>
+                        <a href="{% url 'messagesPatient' %}">
+                            <i class="fab fa-facebook-messenger" id="icon"></i>Messages
+                        </a>
+                    </div><!-- End side menu-->
+                </div><!-- End wrapper 1 -->
+                <!-- Start Side - wrapper 2  -->
+                <div class="side-wrapper">
+                    <div class="side-title">Diagnosis</div>
+                    <div class="side-menu">
+                        <a href="{% url 'surveyPatient' %}">
+                            <i class="fas fa-poll-h" id="icon"></i>Survey
+                        </a>
+                        <a href="{% url 'imagePatient' %}">
+                            <i class="fas fa-camera-retro" id="icon"></i>image
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-eye" id="icon"></i>Eye Tarcking
+                        </a>
+                        <a href="{% url 'logo' %}">
+                          <i class="fas fa-sign-out-alt" id="icon"></i>Logout
+                      </a>
+                    </div><!-- End side menu-->
+                </div><!-- End Side - wrapper 2 -->
+            </div><!-- End Left Side-->
+            <!-- Start content-wrapper -->
+            <div class="content-wrapper ">
+                <!-- Start content-wrapper-header -->
+                <div class="content-wrapper-header ">
+                    <!-- Start  Slides -->
+                    <ul class="slides">
+                        <input type="radio" name="radio-btn" id="img-1" checked />
+                        <li class="slide-container">
+                            <div class="slide">
+                                <img src="{% static 'images/cartoon/2201.i511.013.S.m009.c13.autism illustration flat.jpg' %}" />
+                                <!-- <p class="text">Autism spectrum disorder is a condition related to brain development that impacts how a person perceives and socializes with others, causing problems in social interaction and communication.</p>
+                                <button class="content-button">More</button> -->
+                            </div>
+                            <div class="nav">
+                                <label for="img-6" class="prev">&#x2039;</label>
+                                <label for="img-2" class="next">&#x203a;</label>
+                            </div>
+                        </li><!-- End image 1 -->
+                        <input type="radio" name="radio-btn" id="img-2" />
+                        <li class="slide-container">
+                            <div class="slide">
+                              <img src="{% static 'images/cartoon/portrait-sad-little-girl-sitting-isolated-blue-studio-background-how-it-feels-be-autist-modern-problems-new-vision-social-issues-concept-autism-childhood-healthcare-medicine.jpg' %}" />
+                            </div>
+                            <div class="nav">
+                                <label for="img-1" class="prev">&#x2039;</label>
+                                <label for="img-3" class="next">&#x203a;</label>
+                            </div>
+                        </li><!-- End image 2 -->
+                        <input type="radio" name="radio-btn" id="img-3" />
+                        <li class="slide-container">
+                            <div class="slide">
+                              <img src="{% static 'images/HQ/alireza-attari-SBIak0pKUIE-unsplash (1).jpg' %}" />
+                            </div>
+                            <div class="nav">
+                                <label for="img-2" class="prev">&#x2039;</label>
+                                <label for="img-4" class="next">&#x203a;</label>
+                            </div>
+                        </li><!-- End image 2 -->
+                        <!-- Start dots -->
+                        <li class="nav-dots">
+                          <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+                          <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+                          <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+                        </li><!-- End dots -->
+                    </ul><!-- End slides -->
+                </div><!-- End content-wrapper-header -->
+                <!-- Start content-section 1-->
+                <div class="content-section" >
+                    <div class="row mt-3 container">
+                        <div class="col-6 teamimage">
+                            <img src="{% static 'images/5018552.jpg' %}" alt="" >
+                        </div>
+                        <div class="col-6 team">
+                            <h2>Caregivers Team</h2>
+                            <p class="team-text">caregivers is a mobile application that
+                              helps to diagnose autism, provides
+                              activities to help autistic people have a
+                              more realistic life, and helps monitor
+                              the development of treatment.</p>
+                            <button class="team-button"> 
+                                <i class="fas fa-arrow-circle-right"></i>GO TO OUR TEAM
+                            </button>
+                        </div>
+                    </div>
+                </div><!-- End content-section 1-->
+                <!-- Start content-section 2-->
+                <div class="content-section" >
+                    <div class="line"></div>
+                    <h4 class="heading">Treatment</h4>
+                    <div class="blog-slider container" >
+                        <div class="blog-slider__wrp swiper-wrapper">
+                          <div class="blog-slider__item swiper-slide">
+                            <div class="blog-slider__img">
+                              
+                              <img src="{% static 'images/6785145.jpg' %}" alt="">
+                            </div>
+                            <div class="blog-slider__content">
+                              <div class="blog-slider__title">Communication</div>
+                              <div class="blog-slider__text">Autism may impact verbal communication, leading to difficulties in expressing thoughts and feelings.</div>
+                            </div>
+                          </div>
+                          <div class="blog-slider__item swiper-slide">
+                            <div class="blog-slider__img">
+                              <img src="{% static 'images/color.jpg' %}" alt="">
+                            </div>
+                            <div class="blog-slider__content">
+                              <div class="blog-slider__title">ADHD</div>
+                              <div class="blog-slider__text">Autism and ADHD commonly occur, and individuals with both conditions may experience challenges with attention, impulsivity, and hyperactivity, requiring tailored strategies and support.</div>
+                            </div>
+                          </div>
+                          
+                          <div class="blog-slider__item swiper-slide">
+                            <div class="blog-slider__img">
+                              <img src="{% static 'images/learn.jpg' %}" alt="">
+                            </div>
+                            <div class="blog-slider__content">
+                              <div class="blog-slider__title">Hearing</div>
+                              <div class="blog-slider__text">Individuals with autism may exhibit varying sensitivities to sounds, which can range from hypo- or hypersensitivity to certain auditory stimuli.</div>
+                            </div>
+                          </div>
+                          
+                          <div class="blog-slider__item swiper-slide">
+                            <div class="blog-slider__img">
+                              <img src="{% static 'images/puzzle.jpg' %}" alt="">
+                            </div>
+                            <div class="blog-slider__content">
+                              <div class="blog-slider__title">Sight</div>
+                              <div class="blog-slider__text">Some individuals with autism may have enhanced visual processing abilities, showcasing attention to detail and visual memory skills.</div>
+                            </div>
+                          </div>
+
+                          <div class="blog-slider__item swiper-slide">
+                            <div class="blog-slider__img">
+                              <img src="{% static 'images/social.jpg' %}" alt="">
+                            </div>
+                            <div class="blog-slider__content">
+                              <div class="blog-slider__title">Touch</div>
+                              <div class="blog-slider__text">Sensory sensitivities in autism can extend to the sense of touch, with individuals often displaying heightened or reduced sensitivity to certain textures, clothing, or physical contact.</div>
+                            </div>
+                          </div>
+
+                          <div class="blog-slider__item swiper-slide">
+                            <div class="blog-slider__img">
+                              <img src="{% static 'images/56393.jpg' %}" alt="">
+                            </div>
+                            <div class="blog-slider__content">
+                              <div class="blog-slider__title">Educational</div>
+                              <div class="blog-slider__text">Individualized education plans (IEPs) play a vital role in supporting students with autism, ensuring tailored accommodations, strategies, and goals to address their unique learning needs.</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="blog-slider__pagination"></div>
+                      </div>
+                    
+                </div><!-- End content-section 2 -->
+                <!-- Start content-section 3-->
+                <div class="content-section autistic">
+                  <hr class="line3">
+                  <h4 class="heading3">Doctors</h4>
+                  <!-- Cryptocurrencies section -->                    
+                  <div class="cryptocurrencies-info-cards row container">
+                    <div class="info-card col-lg-4 col-md-6 col-sm-12 ">
+                      <img src="{% static 'images/dr1.png' %}" alt="" class="child">
+                      <h3 class="info-card__title">Dr.Nihal<span>Ehab</span></h3>
+                      <p class="info-card__description">El-Mansoura</p>
+                      <p class="info-card__description">150 $</p>
+                      <button class="info-card__btn"><a href="{% url 'bookPatient' %}">Booking</a> 
+                        <i class="fas fa-angle-right"></i>
+                      </button>                          
+                    </div>
+                    <div class="info-card col-lg-4 col-md-6 col-sm-12 ">
+                        <img src="{% static 'images/dr2.png' %}" alt="" class="child">
+                        <h3 class="info-card__title">Dr.Yasser<span>Mohammed</span></h3>
+                        <p class="info-card__description">Tanta</p>
+                        <p class="info-card__description">200 $</p>
+                        <button class="info-card__btn"><a href="{% url 'bookPatient' %}">Booking</a> 
+                          <i class="fas fa-angle-right"></i>
+                        </button>                          
+                    </div>
+                    <div class="info-card col-lg-4 col-md-6 col-sm-12 ">
+                        <img src="{% static 'images/dr3.png' %}" alt="" class="child">
+                        <h3 class="info-card__title">Dr.laila<span>Mousa</span></h3>
+                        <p class="info-card__description">El-Mansoura</p>
+                        <p class="info-card__description">100 $</p>
+                        <button class="info-card__btn"><a href="{% url 'bookPatient' %}">Booking</a> 
+                          <i class="fas fa-angle-right"></i>
+                        </button>                          
+                    </div>
+                  </div><!-- Cryptocurrencies section-->
+                </div><!-- End content-section3-->
+                <!-- Start content-section4 Book-->
+                <div class="content-section book row">
+                  <div class="line2"></div>
+                    <h4 class="heading2">Booking</h4>
+                    <div class="blog-book container"  >
+                      <div class="blog-book__wrp swiper-wrapper">
+                        <div class="blog-book__item swiper-book">
+                          <div class="blog-book__img">
+                              <img src="{% static 'images/3959915.jpg' %}" alt="">
+                          </div>
+                          <div class="blog-book__content">
+                            <div class="blog-book__title">Book an appointment</div>
+                            <div class="blog-book__text">BOOKNMEET offers a wide selection of online solutions that simplify the process of scheduling appointments </div>
+                            <a href="{% url 'bookPatient' %}" class="blog-book__button">GO TO OUR BOOK</a>
+                          </div>
+                        </div>
+                        <div class="blog-slider__pagination"></div> 
+                      </div><!-- End blog-book__item-->
+                    </div><!-- End blog-book__wrp -->
+                  </div><!-- End End content-section4 Book-->
+                  <!-- Start Footer -->
+                  <div class="content-section">
+                    <footer class="mainfooter" role="contentinfo">
+                        <div class="footer-middle">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-md-3 col-sm-6">
+                              <!--Column1-->
+                              <div class="footer-pad">
+                                <h4>Home</h4>
+                                <ul class="list-unstyled">
+                                  <li><a href="#"></a></li>
+                                  <li><a href="#">Survey</a></li>
+                                  <li><a href="#">Photo</a></li>
+                                  <li><a href="#">Eye Tracking</a></li>
+                                  <li><a href="#">Profile</a></li>
+                                  <li><a href="#">Messages</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                              <!--Column1-->
+                              <div class="footer-pad">
+                                <h4>Service</h4>
+                                <ul class="list-unstyled">
+                                  <li><a href="#">Autistic</a></li>
+                                  <li><a href="#">Treatment</a></li>
+                                  <li><a href="#">Booking</a></li>
+                                  <li><a href="#">Advice</a></li>
+                                  <li><a href="#">Caregivers</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                              <!--Column1-->
+                              <div class="footer-pad">
+                                <h4>technology</h4>
+                                <ul class="list-unstyled">
+                                  <li><a href="#">Bootstrap</a></li>
+                                  <li><a href="#">jquery</a></li>
+                                  <li><a href="#">AOS</a></li>
+                                  <li><a href="#">RestFul</a></li>
+                                  <li><a href="#">Django</a></li>
+                                  <li>
+                                    <a href="#"></a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                              <div class="col-md-3">
+                                  <h4>Follow Us</h4>
+                                  <ul class="social-network social-circle">
+                                  <li><a href="https://www.facebook.com/profile.php?id=100086924003453&mibextid=ZbWKwL" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                  <li><a href="https://youtube.com/@caregivers8979" class="icoYoutube" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+                                  <li><a href="https://instagram.com/_caregivers?igshid=YmMyMTA2M2Y=" class="iconInstgram" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                  </ul>
+                                  <ul class="social-network2 social-circle2">
+                                    <li><a href="caregivers2023@gmail.com" class="icoEmail" title="Email"><i class="fas fa-envelope"></i></a></li>
+                                    <li><a href="01147660749" class="icoPhone" title="Phone"><i class="fas fa-phone-alt"></i></a></li>
+                                  </ul>			
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-12 copy">
+                                <p class="text-center">&copy; Copyright 2023 - <span>Kholoud Elsherbeny</span> .  All rights reserved.</p>
+                              </div>
+                          </div>
+                        </div>
+                        </div>
+                      </footer>
+              </div><!-- End footer -->
+            </div><!-- End  content-wrapper -->
+        </div><!-- End Wrapper-->
+    </div><!-- End Content App -->
+    <!-- links of javacript -->
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/swiper.min.js' %}"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="{% static 'js/homePatient.js' %}"></script>
+</body>
+</html>

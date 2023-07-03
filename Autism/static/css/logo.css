@@ -1,0 +1,260 @@
+/*
+Just a preloading animation, didn't saw many of them here on Codepen, so I said why not create one ?
+
+Used jQuery's window.load() function, in this demo there is also setTimeot(), cause there is no content to load, so we are simulating it.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:  'Poppins', sans-serif;
+}
+:root{
+    --First-color:#161624;
+    --Second-color:#f2363c;
+    --third-color:#573b8a;
+} 
+body{
+    width: 100%;
+    height: 90vh;
+    background-color: rgb(32, 35, 48);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+	margin: -20px 0 50px;
+}
+
+/* Start LOGO */
+.loader{
+    width: 100%;
+    height: 100%;
+	position: fixed;
+	z-index: 9999999;
+	justify-content: center;
+	align-items: center;
+}
+.loader .hidden{
+    animation: fill 1s;
+    animation-fill-mode: forwards;
+}
+#logo{
+    position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50% , -50%);
+    animation: fill 0.5s ease  forwards 3.5s ;  
+}
+#logo path:nth-child(1){
+    stroke-dasharray: 431px;
+    stroke-dashoffset: 431px;
+    animation: line-anim 2s ease forwards infinite;
+}
+#logo path:nth-child(2){
+    stroke-dasharray: 401px;
+    stroke-dashoffset: 401px;
+    animation: line-anim 2s ease forwards 0.3s infinite;
+}
+#logo path:nth-child(3){
+    stroke-dasharray: 242px;
+    stroke-dashoffset: 242px;
+    animation: line-anim 2s ease forwards 0.6s infinite;
+}
+#logo path:nth-child(4){
+    stroke-dasharray: 401px;
+    stroke-dashoffset: 401px;
+    animation: line-anim 2s ease forwards 0.9s infinite;
+}
+#logo path:nth-child(5){
+    stroke-dasharray: 552px;
+    stroke-dashoffset: 552px;
+    animation: line-anim 2s ease forwards 1.2s infinite;
+}
+#logo path:nth-child(6){
+    stroke-dasharray: 265px;
+    stroke-dashoffset: 265px;
+    animation: line-anim 2s ease forwards 1.5s infinite;
+}
+#logo path:nth-child(7){
+    stroke-dasharray: 331px;
+    stroke-dashoffset: 331px;
+    animation: line-anim 2s ease forwards 1.8s infinite;
+}
+#logo path:nth-child(8){
+    stroke-dasharray: 401px;
+    stroke-dashoffset: 401px;
+    animation: line-anim 2s ease forwards 2.1s infinite;
+}
+#logo path:nth-child(9){
+    stroke-dasharray: 242px;
+    stroke-dashoffset: 242px;
+    animation: line-anim 2s ease forwards 2.4s infinite;
+}
+#logo path:nth-child(10){
+    stroke-dasharray: 371px;
+    stroke-dashoffset: 371px;
+    animation: line-anim 2s ease forwards 2s infinite;
+}
+/* KeyFrames Animation  */
+@keyframes line-anim {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes fill {
+    from {
+        fill: transparent;
+		opacity: 1;
+    }
+    to {
+        fill: white;
+        visibility: hidden; 
+    }
+}
+/* End Animation */
+/* End LOGO */
+
+@keyframes appear {
+	to {
+		opacity: 1;
+	}
+}
+
+
+.container {
+	border-radius: 25px;
+	position: relative;
+	overflow: hidden;
+	/* display: none; */
+	opacity: 0;
+	animation-name: appear;
+	animation-duration: 1s;
+	animation-delay: 4s;
+	/* animation-play-state: running; */
+	animation-fill-mode: both;
+	z-index:99999999;
+}
+
+
+/* END Sign in , up */ 
+.cryptocurrencies-info-cards2{
+    position: relative;
+    top: 120px;
+    left: 100px;
+    width: 90%;
+    height: 650px;
+    display: grid;
+    grid-template-columns: 400px 400px ;
+    gap: 5px;
+	border-radius: 25px;
+  }
+.info-card2{
+    background-color: rgba(255,255,255,0.8);
+    position: relative;
+    left: 150px;
+    top: 50px;
+    height: 450px;
+    border-radius: 12px;
+    width: 600px;
+	border-radius: 25px;
+  }
+.Notes{
+    height: 190px;
+    border-radius: 25px;
+}
+.Results{
+    height: 190px;
+    border-radius: 25px;
+}
+
+ .choice-doc{
+    font-size: 250px;
+    color: #02b3e4 ;
+    margin-left: 70px;
+    margin-top: 10px;
+}
+.info-card2  h5{
+    font-size: 35px;
+    text-align: center;
+    margin-top: 10px;
+    color: rgb(32, 35, 48) ;
+}
+.line{
+    width: 5px;
+  height: 400px;
+  position: relative;
+  left: 350px;
+  top: 20px;
+  background-color:  rgba(0, 0, 0, 0.8);
+}
+#callLogin{
+    position: absolute;
+	top: 280px;
+    left: 20px;
+	transition: all 0.6s ease-in-out;
+}
+
+.animate-border{
+	border: 40px solid #EDEBE6;
+	transition: border .5s .2s ease;
+}
+
+#callLogin button {
+    margin-top: 80px;
+    margin-left: 90px;
+    padding: 10px 23px;
+    font-size: 15px;
+    background-image: linear-gradient(to bottom, #02b3e4  100%,rgba(0,0,0,0.7));
+    color:#fff;
+    outline: none;
+    border:1px solid transparent;
+    border-radius: 20px;
+    font-family: roboto;
+    font-weight: 400;
+    cursor: pointer;    
+}
+
+#callLogin button:hover, #callLogin button:focus {
+    -webkit-animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    -moz-animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    -o-animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+#callLogin button a,
+#callLogin2 button a{
+    text-decoration: none;
+    color: #fff;
+}
+#callLogin2 button {
+    margin-top: 40px;
+    margin-left: 100px;
+    padding: 10px 23px;
+    font-size: 15px;
+    background-image: linear-gradient(to bottom, #02b3e4  100%,rgba(0,0,0,0.7));
+    color:#fff;
+    outline: none;
+    border:1px solid transparent;
+    border-radius: 20px;
+    font-family: roboto;
+    font-weight: 400;
+    cursor: pointer;    
+}
+
+#callLogin2 button:hover, #callLogin2 button:focus {
+    -webkit-animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    -moz-animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    -o-animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}

@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/survey.css' %}">
+</head>
+<body class="light-mode">
+    <!-- Start Background  -->
+    <div class="video-bg">
+        <video width="320" height="240" autoplay loop muted>
+            <source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+        </video>
+    </div><!-- End Background -->
+    <!-- Start Dark - light  -->
+    <div class="dark-light">
+    <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" /></svg>
+    </div><!-- End Dark - light -->
+    <!-- Start Content App  -->
+    <div class="app">
+        <!-- Start Header -->
+        <div class="header">
+            <!-- Start logo -->
+            <div class="logo">
+                <img src="{% static 'images/logo3.png' %}" alt="">
+            </div><!-- End logo -->
+            <!-- Start Header links -->
+            <div class="header-menu">
+                <a class="menu-link " href="{% url 'home' %}">Home</a>
+                <a class="menu-link" href="{% url 'advice' %}">Advice</a>
+                <a class="menu-link" href="{% url 'book' %}">Booking</a>
+                <a class="menu-link " href="{% url 'caregivers' %}">Caregivers</a>
+            </div><!-- End header links -->
+            <!-- Start Search -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+            </div><!-- End Search -->
+            <!-- Header icon , Profile -->
+            <div class="header-profile">
+                <!-- Start profile doctor -->
+                <img class="profile-img" src="{% static 'images/dr2.png' %}" alt="">
+            </div><!--  End Header icon , Profile -->
+        </div> <!-- End Header -->
+        <!-- Start Content -->
+        <div class="wrapper">
+            <!-- Start Left Side -->
+            <div class="left-side">
+                <!-- Start Side - wrapper 1  -->
+                <div class="side-wrapper">
+                    <!-- Start Doctor -->
+                    <div class="side-title">Doctor</div>
+                    <!-- Start Side- menu -->
+                    <div class="side-menu">
+                        <a href="{% url 'profile' %}">
+                            <i class="fas fa-user" id="icon"></i>profile
+                        </a>
+                        <a href="{% url 'messages' %}">
+                            <i class="fab fa-facebook-messenger" id="icon"></i>Messages
+                        </a>
+                    </div><!-- End side menu-->
+                </div><!-- End wrapper 1 -->
+                <!-- Start Side - wrapper 2  -->
+                <div class="side-wrapper">
+                    <div class="side-title">Diagnosis</div>
+                    <div class="side-menu">
+                        <a href="#">
+                            <i class="fas fa-poll-h" id="icon"></i>Survey
+                        </a>
+                        <a href="{% url 'image' %}" >
+                            <i class="fas fa-camera-retro " id="icon"></i>Image
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-eye" id="icon"></i>Eye Tarcking
+                        </a>
+                        <a href="{% url 'logo' %}">
+                            <i class="fas fa-sign-out-alt" id="icon"></i>Logout
+                        </a>
+                    </div><!-- End side menu-->
+                </div><!-- End Side - wrapper 2 -->
+            </div><!-- End Left Side-->
+            <!-- Start content-wrapper -->
+            <div class="content-wrapper ">
+                <div class="quiz-app">
+                    <div class="quiz-info">
+                      <div class="category">Category: <span>Childern</span></div>
+                      <div class="count">Questions Count: <span></span></div> 
+                    </div>
+                    <div class="quiz-area"></div>
+                    <div class="answers-area"></div>
+                  <button class="submit-button">Submit Answer</button>
+                  <div class="bullets">
+                      <div class="spans">
+                      </div>
+                      <!--<div class="countdown">
+                          <span class="minutes">02</span> :
+                          <span class="seconds">45</span>
+                      </div> -->
+                    </div>
+                    <div class="results">
+                      <!--<span class="perfect">Perfect</span>
+                      You Answered 10 from 10  -->
+                    </div>
+                  </div>
+                </div>
+            </div><!-- End  content-wrapper -->
+        </div><!-- End Wrapper-->
+    </div><!-- End Content App -->
+    <!-- links of javacript -->
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/swiper.min.js' %}"></script>
+    <script src="{% static 'js/survey.js' %}"></script>
+</body>
+</html>

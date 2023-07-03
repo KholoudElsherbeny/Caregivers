@@ -1,0 +1,134 @@
+from django.shortcuts import render
+
+# Create your views here.
+def logo(request):
+    #return HttpResponse('hello')
+    return render(request, 'logo.html')
+def register(request):
+    return render(request, 'registerPatient.html')
+def login(request):
+    return render(request, 'loginPatient.html')
+def home(request):
+    return render(request , 'homePatient.html')
+def advice(request):
+    return render(request, 'advicePatient.html')
+def booking(request):
+    return render(request, 'book.html')
+def caregivers(request):
+    return render(request, 'caregiversPatient.html')
+def profile(request):
+    return render(request, 'profilePatient.html')
+def messages(request):
+    return render(request, 'messagePatient.html')
+def survey(request):
+    context={"questions":[
+    {
+      "title": "ٌNo evidence of difficulty or abnormality in relating to people.",
+      "answer_1": "Mildly abnormal relationships",
+      "answer_2": "Moderately abnormal relationships",
+      "answer_3": "Severely abnormal relationships",
+      "right_answer": "Mildly abnormal relationships"
+    },
+    {
+      "title": "Appropriate imitation",
+      "answer_1": "Mildly abnormal imitation",
+      "answer_2": "Moderately abnormal imitation",
+      "answer_3": "Severely abnormal emotional response",
+      "right_answer": "Mildly abnormal imitation"
+    },
+    {
+      "title": "Age-appropriate and situation-appropriate emotional response",
+      "answer_1": "Mildly abnormal emotional response",
+      "answer_2": "Moderately abnormal emotional response",
+      "answer_3": "Severely abnormal emotional response",
+      "right_answer": "Mildly abnormal emotional response"
+    },
+    {
+      "title": "Age-appropriate body use",
+      "answer_1": "Mildly abnormal body use",
+      "answer_2": "Moderately abnormal body use",
+      "answer_3": "Severely abnormal body use",
+      "right_answer": "Mildly abnormal body use"
+    },
+    {
+      "title": "Appropriate interest in, or use of, toys and other objects",
+      "answer_1": "Mildly inappropriate interest in, or use of, toys and other objects",
+      "answer_2": "Moderately inappropriate interest in, or use of, toys and other objects",
+      "answer_3": "Severely inappropriate interest in, or use of, toys and other objects",
+      "right_answer": "Mildly inappropriate interest in, or use of, toys and other objects"
+    },
+    {
+      "title": "Age-appropriate adaptation to change",
+      "answer_1": "Mildly abnormal adaptation to change",
+      "answer_2": "Moderately abnormal adaptation to change",
+      "answer_3": "Severely abnormal adaptation to change",
+      "right_answer": "Mildly abnormal adaptation to change"
+    },
+    {
+      "title": "Age-appropriate visual response",
+      "answer_1": "Mildly abnormal visual response",
+      "answer_2": "Moderately abnormal visual response",
+      "answer_3": "Severely abnormal visual response",
+      "right_answer": "Mildly abnormal visual response"
+    },
+    {
+      "title": "Age-appropriate listening response.",
+      "answer_1": "Mildly abnormal listening response",
+      "answer_2": "Moderately abnormal listening response.",
+      "answer_3": "Severely abnormal listening response",
+      "right_answer": "Mildly abnormal listening response"
+    },
+    {
+      "title": "Normal use of, and response to, taste, smell, and touch",
+      "answer_1": "Mildly abnormal use of, and response to, taste, smell, and touch",
+      "answer_2": "Moderately abnormal use of, and response to, taste, smell, and touch.",
+      "answer_3": "Severely abnormal use of, and response to, taste, smell, and touch",
+      "right_answer": "Mildly abnormal use of, and response to, taste, smell, and touch"
+    },
+    {
+      "title": "Normal fear or nervousness",
+      "answer_1": "Mildly abnormal fear or nervousness",
+      "answer_2": "Moderately abnormal fear or nervousness",
+      "answer_3": "Severely abnormal fear or nervousness",
+      "right_answer": "Mildly abnormal fear or nervousness"
+    },
+    {
+      "title": "Normal verbal communication, age and situation appropriate",
+      "answer_1": "Mildly abnormal verbal communication",
+      "answer_2": "Moderately abnormal verbal communication",
+      "answer_3": "Severely abnormal verbal communication",
+      "right_answer": "Mildly abnormal verbal communication"
+    },
+    {
+      "title": "Normal use of nonverbal communication, age and situation appropriate",
+      "answer_1": "Mildly abnormal nonverbal communication",
+      "answer_2": "Moderately abnormal nonverbal communication",
+      "answer_3": "Severely abnormal nonverbal communication",
+      "right_answer": "Mildly abnormal nonverbal communication"
+    },
+    {
+      "title": "Normal activity level for age and circumstances",
+      "answer_1": "Mildly abnormal activity level",
+      "answer_2": "Moderately  abnormal activity level",
+      "answer_3": "Severely  abnormal activity level",
+      "right_answer": "Mildly abnormal activity level"
+    },
+    {
+      "title": "Intelligence is normal and reasonably consistent across various areas.",
+      "answer_1": "Mildly abnormal intellectual functioning.",
+      "answer_2": "Moderately abnormal intellectual functioning.",
+      "answer_3": "Severely abnormal intellectual functioning.",
+      "right_answer": "Mildly abnormal intellectual functioning."
+    },
+    {
+      "title": "No autism spectrum disorder",
+      "answer_1": "Mildly autism spectrum disorder",
+      "answer_2": "Moderately  autism spectrum disorder",
+      "answer_3": "Severely  autism spectrum disorder",
+      "right_answer": "Mildly autism spectrum disorder"
+    }
+  ]}
+    return render(request, 'surveyPatient.html' , context=context)
+
+def image(request):
+    return render(request, 'imagePatient.html')
